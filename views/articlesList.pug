@@ -1,0 +1,10 @@
+extends layout
+        
+block content
+    h1 #{pageTitle}
+    ul.list-group
+        //forEach runs through article var and adds each item in there
+        each article, i in articles
+            // the = lets li know it is a variable
+            li.list-group-item
+                a(href="/articles/"+article._id)= article.title

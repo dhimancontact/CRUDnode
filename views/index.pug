@@ -1,0 +1,13 @@
+extends layout
+        
+block content
+    h1 CRUD type of CMS 
+    p built using node.js, dockerized MongoDB, expressJS, and JS
+    p keeping it simple, in order to get a look under the hood and build other things off of this.
+    hr
+    ul.list-group
+        //forEach runs through article var and adds each item in there
+        each article, i in articles
+            // the = lets li know it is a variable
+            li.list-group-item
+                a(href="/articles/"+article._id)= article.title
